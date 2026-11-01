@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="fr"><head>
+  <script>if(location.hash==='')location.hash='#/produit/vert';</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>T-shirt Merveille Vert &amp; Marron — MERVEILLE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wdth,wght@62.5..100,300..800&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body>
+
+  <!-- Défs SVG partagées (forme du t-shirt, statue, textures) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <path id="teeShape" d="M160 70 Q215 48 245 42 Q300 70 355 42 Q385 48 440 70 L575 150 Q560 205 530 262 L468 236 L470 598 Q300 618 130 598 L132 236 L70 262 Q40 205 25 150 Z"></path>
+      <clipPath id="teeClip"><use href="#teeShape"></use></clipPath>
+      <linearGradient id="teeLight" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity=".22"></stop>
+        <stop offset=".45" stop-color="#fff" stop-opacity="0"></stop>
+        <stop offset="1" stop-color="#000" stop-opacity=".22"></stop>
+      </linearGradient>
+      <radialGradient id="teeFold" cx=".5" cy=".5" r=".5">
+        <stop offset="0" stop-color="#000" stop-opacity=".07"></stop>
+        <stop offset="1" stop-color="#000" stop-opacity="0"></stop>
+      </radialGradient>
+      <filter id="fabric" x="0" y="0" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4"></feTurbulence>
+        <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0"></feColorMatrix>
+      </filter>
+      <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f3dc8a"></stop>
+        <stop offset=".45" stop-color="#c99a32"></stop>
+        <stop offset=".7" stop-color="#e9c768"></stop>
+        <stop offset="1" stop-color="#9c7322"></stop>
+      </linearGradient>
+      <!-- La Bonne Mère : Vierge à l'Enfant sur son socle -->
+      <symbol id="statue" viewBox="0 0 40 104">
+        <path d="M20 1.5 l1.2 2.6 2.8.2-2.1 1.9.7 2.8L20 7.6l-2.6 1.4.7-2.8-2.1-1.9 2.8-.2Z"></path>
+        <circle cx="20" cy="13.5" r="4.6"></circle>
+        <circle cx="27.6" cy="24" r="3.3"></circle>
+        <path d="M15.2 19.2 Q20 16.6 24.8 19.2 L25.6 22 Q23.4 25.4 26 28.4 Q30.6 29 30.4 25 L31.2 31 Q29.4 35 27.4 36 L29.6 70 Q30.6 84 32.6 91 L7.4 91 Q9.4 84 10.4 70 L12.4 36 Q9.4 32 11.4 27 Q12.6 22 15.2 19.2Z"></path>
+        <rect x="9" y="91" width="22" height="4" rx=".6"></rect>
+        <rect x="11.5" y="95" width="17" height="9"></rect>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="announcement">
+    <div class="announcement__social social">
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" class="fill"></circle></svg></a>
+      <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3-3.46M14 3c.4 2.6 2.2 4.4 5 4.6"></path></svg></a>
+    </div>
+    <div class="announcement__track">
+      <p class="announcement__msg">Livraison offerte en France dès 150 €</p>
+      <p class="announcement__msg">Expédié depuis le Vieux-Port, Marseille</p>
+      <p class="announcement__msg is-active">Drop n°1 — série limitée, numérotée</p>
+    </div>
+    <div class="announcement__lang">FR · €</div>
+  </div>
+
+  <header class="header" id="header">
+    <button class="header__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+    <nav class="header__nav" aria-label="Navigation principale">
+      <a href="#/collection" class="">Drop n°1 — Vieux-Port</a>
+      <a href="#" data-locked="">Vallon des Auffes</a>
+      <a href="#" data-locked="">Les Goudes</a>
+      <a href="#/maison">La Maison</a>
+    </nav>
+    <a href="#/" class="header__logo" aria-label="Accueil">
+      <span class="wm wm--logo" data-wordmark=""><svg class="wm__statue" viewBox="0 0 40 104" aria-hidden="true"><use href="#statue" fill="url(#gold)"></use></svg><span class="wm__letters"><span class="wm__l" style="--h:0.42">M</span><span class="wm__l" style="--h:0.56">E</span><span class="wm__l" style="--h:0.7"><i class="wm__cross"></i>R</span><span class="wm__l" style="--h:0.84">V</span><span class="wm__l" style="--h:1">E</span><span class="wm__l" style="--h:0.9">I</span><span class="wm__l" style="--h:0.74">L</span><span class="wm__l" style="--h:0.58">L</span><span class="wm__l" style="--h:0.44">E</span></span></span>
+    </a>
+    <div class="header__icons">
+      <button aria-label="Compte" class="hide-sm"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></button>
+      <button aria-label="Recherche"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l5 5"></path></svg></button>
+      <button aria-label="Panier" id="cartBtn" class="header__cart"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8Z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg><span class="header__count" id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <aside class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <nav>
+      <a href="#/collection">Drop n°1 — Vieux-Port</a>
+      <a href="#" data-locked="">Vallon des Auffes</a>
+      <a href="#" data-locked="">Les Goudes</a>
+      <a href="#/maison">La Maison</a>
+    </nav>
+  </aside>
+
+  <main id="app">
+  <div class="crumbs"><a href="#/">Accueil</a> / <a href="#/collection">Le T-shirt</a> / Vert &amp; Marron</div>
+  <section class="pdp" data-cw="vert">
+    <div class="gallery">
+      <div class="gallery__thumbs">
+        <button class="gallery__thumb is-active" data-slide="0" aria-label="Image 1"><div class="tee tee--back tee--dark" style="--tee:#304536;--print:#c09062" role="img" aria-label="T-shirt Merveille Vert bouteille / Marron tabac, vue dos">
+    <svg viewBox="0 0 600 640" aria-hidden="true">
+      <ellipse class="tee__shadow" cx="300" cy="614" rx="210" ry="12" fill="#000"></ellipse>
+      <use href="#teeShape" fill="#304536"></use>
+      <g clip-path="url(#teeClip)">
+        <rect width="600" height="640" fill="url(#teeLight)"></rect>
+        <rect width="600" height="640" filter="url(#fabric)" opacity="0.22"></rect>
+        <ellipse cx="190" cy="470" rx="70" ry="210" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="425" cy="500" rx="60" ry="170" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="300" cy="610" rx="260" ry="30" fill="url(#teeFold)"></ellipse>
+        <path d="M160 70 Q150 160 132 236 M440 70 Q450 160 468 236" stroke="rgba(255,255,255,.07)" stroke-width="1.6" fill="none"></path>
+        <path d="M44 146 Q62 204 88 254 M556 146 Q538 204 512 254 M130 580 Q300 600 470 580" stroke="rgba(255,255,255,.07)" stroke-width="1.3" fill="none" stroke-dasharray="3 3"></path>
+      </g>
+      <path d="M244 42 Q300 68 356 42" fill="none" stroke="#304536" stroke-width="12" stroke-linecap="round"></path>
+       <path d="M244 42 Q300 68 356 42" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="12" stroke-linecap="round" opacity=".6"></path>
+       <path d="M250 50 Q300 74 350 50" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="1.2" stroke-dasharray="3 3"></path>
+      <use href="#teeShape" fill="none" stroke="rgba(0,0,0,.14)" stroke-width="1"></use>
+    </svg>
+    <div class="tee__print"><span class="wm"><svg class="wm__statue" viewBox="0 0 40 104" aria-hidden="true"><use href="#statue" fill="url(#gold)"></use></svg><span class="wm__letters"><span class="wm__l" style="--h:0.42">M</span><span class="wm__l" style="--h:0.56">E</span><span class="wm__l" style="--h:0.7"><i class="wm__cross"></i>R</span><span class="wm__l" style="--h:0.84">V</span><span class="wm__l" style="--h:1">E</span><span class="wm__l" style="--h:0.9">I</span><span class="wm__l" style="--h:0.74">L</span><span class="wm__l" style="--h:0.58">L</span><span class="wm__l" style="--h:0.44">E</span></span></span></div>
+  </div></button><button class="gallery__thumb " data-slide="1" aria-label="Image 2"><div class="tee tee--front tee--dark" style="--tee:#304536;--print:#c09062" role="img" aria-label="T-shirt Merveille Vert bouteille / Marron tabac, vue face">
+    <svg viewBox="0 0 600 640" aria-hidden="true">
+      <ellipse class="tee__shadow" cx="300" cy="614" rx="210" ry="12" fill="#000"></ellipse>
+      <use href="#teeShape" fill="#304536"></use>
+      <g clip-path="url(#teeClip)">
+        <rect width="600" height="640" fill="url(#teeLight)"></rect>
+        <rect width="600" height="640" filter="url(#fabric)" opacity="0.22"></rect>
+        <ellipse cx="190" cy="470" rx="70" ry="210" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="425" cy="500" rx="60" ry="170" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="300" cy="610" rx="260" ry="30" fill="url(#teeFold)"></ellipse>
+        <path d="M160 70 Q150 160 132 236 M440 70 Q450 160 468 236" stroke="rgba(255,255,255,.07)" stroke-width="1.6" fill="none"></path>
+        <path d="M44 146 Q62 204 88 254 M556 146 Q538 204 512 254 M130 580 Q300 600 470 580" stroke="rgba(255,255,255,.07)" stroke-width="1.3" fill="none" stroke-dasharray="3 3"></path>
+      </g>
+      <path d="M248 44 Q300 102 352 44 Q300 68 248 44Z" fill="rgba(0,0,0,.34)"></path>
+       <path d="M244 42 Q300 104 356 42" fill="none" stroke="#304536" stroke-width="14" stroke-linecap="round"></path>
+       <path d="M244 42 Q300 104 356 42" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="14" stroke-linecap="round" opacity=".7"></path>
+       <path d="M252 50 Q300 108 348 50" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="1.2" stroke-dasharray="3 3"></path>
+      <use href="#teeShape" fill="none" stroke="rgba(0,0,0,.14)" stroke-width="1"></use>
+    </svg>
+    <div class="tee__chest"><span class="wm"><svg class="wm__statue" viewBox="0 0 40 104" aria-hidden="true"><use href="#statue" fill="url(#gold)"></use></svg><span class="wm__letters"><span class="wm__l" style="--h:0.42">M</span><span class="wm__l" style="--h:0.56">E</span><span class="wm__l" style="--h:0.7"><i class="wm__cross"></i>R</span><span class="wm__l" style="--h:0.84">V</span><span class="wm__l" style="--h:1">E</span><span class="wm__l" style="--h:0.9">I</span><span class="wm__l" style="--h:0.74">L</span><span class="wm__l" style="--h:0.58">L</span><span class="wm__l" style="--h:0.44">E</span></span></span></div>
+  </div></button><button class="gallery__thumb " data-slide="2" aria-label="Image 3"><div class="tee tee--back tee--dark" style="--tee:#304536;--print:#c09062" role="img" aria-label="T-shirt Merveille Vert bouteille / Marron tabac, vue dos">
+    <svg viewBox="0 0 600 640" aria-hidden="true">
+      <ellipse class="tee__shadow" cx="300" cy="614" rx="210" ry="12" fill="#000"></ellipse>
+      <use href="#teeShape" fill="#304536"></use>
+      <g clip-path="url(#teeClip)">
+        <rect width="600" height="640" fill="url(#teeLight)"></rect>
+        <rect width="600" height="640" filter="url(#fabric)" opacity="0.22"></rect>
+        <ellipse cx="190" cy="470" rx="70" ry="210" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="425" cy="500" rx="60" ry="170" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="300" cy="610" rx="260" ry="30" fill="url(#teeFold)"></ellipse>
+        <path d="M160 70 Q150 160 132 236 M440 70 Q450 160 468 236" stroke="rgba(255,255,255,.07)" stroke-width="1.6" fill="none"></path>
+        <path d="M44 146 Q62 204 88 254 M556 146 Q538 204 512 254 M130 580 Q300 600 470 580" stroke="rgba(255,255,255,.07)" stroke-width="1.3" fill="none" stroke-dasharray="3 3"></path>
+      </g>
+      <path d="M244 42 Q300 68 356 42" fill="none" stroke="#304536" stroke-width="12" stroke-linecap="round"></path>
+       <path d="M244 42 Q300 68 356 42" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="12" stroke-linecap="round" opacity=".6"></path>
+       <path d="M250 50 Q300 74 350 50" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="1.2" stroke-dasharray="3 3"></path>
+      <use href="#teeShape" fill="none" stroke="rgba(0,0,0,.14)" stroke-width="1"></use>
+    </svg>
+    <div class="tee__print"><span class="wm"><svg class="wm__statue" viewBox="0 0 40 104" aria-hidden="true"><use href="#statue" fill="url(#gold)"></use></svg><span class="wm__letters"><span class="wm__l" style="--h:0.42">M</span><span class="wm__l" style="--h:0.56">E</span><span class="wm__l" style="--h:0.7"><i class="wm__cross"></i>R</span><span class="wm__l" style="--h:0.84">V</span><span class="wm__l" style="--h:1">E</span><span class="wm__l" style="--h:0.9">I</span><span class="wm__l" style="--h:0.74">L</span><span class="wm__l" style="--h:0.58">L</span><span class="wm__l" style="--h:0.44">E</span></span></span></div>
+  </div></button>
+      </div>
+      <div class="gallery__main">
+        <div class="gallery__slide is-active"><div class="tee tee--back tee--dark" style="--tee:#304536;--print:#c09062" role="img" aria-label="T-shirt Merveille Vert bouteille / Marron tabac, vue dos">
+    <svg viewBox="0 0 600 640" aria-hidden="true">
+      <ellipse class="tee__shadow" cx="300" cy="614" rx="210" ry="12" fill="#000"></ellipse>
+      <use href="#teeShape" fill="#304536"></use>
+      <g clip-path="url(#teeClip)">
+        <rect width="600" height="640" fill="url(#teeLight)"></rect>
+        <rect width="600" height="640" filter="url(#fabric)" opacity="0.22"></rect>
+        <ellipse cx="190" cy="470" rx="70" ry="210" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="425" cy="500" rx="60" ry="170" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="300" cy="610" rx="260" ry="30" fill="url(#teeFold)"></ellipse>
+        <path d="M160 70 Q150 160 132 236 M440 70 Q450 160 468 236" stroke="rgba(255,255,255,.07)" stroke-width="1.6" fill="none"></path>
+        <path d="M44 146 Q62 204 88 254 M556 146 Q538 204 512 254 M130 580 Q300 600 470 580" stroke="rgba(255,255,255,.07)" stroke-width="1.3" fill="none" stroke-dasharray="3 3"></path>
+      </g>
+      <path d="M244 42 Q300 68 356 42" fill="none" stroke="#304536" stroke-width="12" stroke-linecap="round"></path>
+       <path d="M244 42 Q300 68 356 42" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="12" stroke-linecap="round" opacity=".6"></path>
+       <path d="M250 50 Q300 74 350 50" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="1.2" stroke-dasharray="3 3"></path>
+      <use href="#teeShape" fill="none" stroke="rgba(0,0,0,.14)" stroke-width="1"></use>
+    </svg>
+    <div class="tee__print"><span class="wm"><svg class="wm__statue" viewBox="0 0 40 104" aria-hidden="true"><use href="#statue" fill="url(#gold)"></use></svg><span class="wm__letters"><span class="wm__l" style="--h:0.42">M</span><span class="wm__l" style="--h:0.56">E</span><span class="wm__l" style="--h:0.7"><i class="wm__cross"></i>R</span><span class="wm__l" style="--h:0.84">V</span><span class="wm__l" style="--h:1">E</span><span class="wm__l" style="--h:0.9">I</span><span class="wm__l" style="--h:0.74">L</span><span class="wm__l" style="--h:0.58">L</span><span class="wm__l" style="--h:0.44">E</span></span></span></div>
+  </div></div><div class="gallery__slide "><div class="tee tee--front tee--dark" style="--tee:#304536;--print:#c09062" role="img" aria-label="T-shirt Merveille Vert bouteille / Marron tabac, vue face">
+    <svg viewBox="0 0 600 640" aria-hidden="true">
+      <ellipse class="tee__shadow" cx="300" cy="614" rx="210" ry="12" fill="#000"></ellipse>
+      <use href="#teeShape" fill="#304536"></use>
+      <g clip-path="url(#teeClip)">
+        <rect width="600" height="640" fill="url(#teeLight)"></rect>
+        <rect width="600" height="640" filter="url(#fabric)" opacity="0.22"></rect>
+        <ellipse cx="190" cy="470" rx="70" ry="210" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="425" cy="500" rx="60" ry="170" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="300" cy="610" rx="260" ry="30" fill="url(#teeFold)"></ellipse>
+        <path d="M160 70 Q150 160 132 236 M440 70 Q450 160 468 236" stroke="rgba(255,255,255,.07)" stroke-width="1.6" fill="none"></path>
+        <path d="M44 146 Q62 204 88 254 M556 146 Q538 204 512 254 M130 580 Q300 600 470 580" stroke="rgba(255,255,255,.07)" stroke-width="1.3" fill="none" stroke-dasharray="3 3"></path>
+      </g>
+      <path d="M248 44 Q300 102 352 44 Q300 68 248 44Z" fill="rgba(0,0,0,.34)"></path>
+       <path d="M244 42 Q300 104 356 42" fill="none" stroke="#304536" stroke-width="14" stroke-linecap="round"></path>
+       <path d="M244 42 Q300 104 356 42" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="14" stroke-linecap="round" opacity=".7"></path>
+       <path d="M252 50 Q300 108 348 50" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="1.2" stroke-dasharray="3 3"></path>
+      <use href="#teeShape" fill="none" stroke="rgba(0,0,0,.14)" stroke-width="1"></use>
+    </svg>
+    <div class="tee__chest"><span class="wm"><svg class="wm__statue" viewBox="0 0 40 104" aria-hidden="true"><use href="#statue" fill="url(#gold)"></use></svg><span class="wm__letters"><span class="wm__l" style="--h:0.42">M</span><span class="wm__l" style="--h:0.56">E</span><span class="wm__l" style="--h:0.7"><i class="wm__cross"></i>R</span><span class="wm__l" style="--h:0.84">V</span><span class="wm__l" style="--h:1">E</span><span class="wm__l" style="--h:0.9">I</span><span class="wm__l" style="--h:0.74">L</span><span class="wm__l" style="--h:0.58">L</span><span class="wm__l" style="--h:0.44">E</span></span></span></div>
+  </div></div><div class="gallery__slide "><div class="gallery__zoom"><div class="tee tee--back tee--dark" style="--tee:#304536;--print:#c09062" role="img" aria-label="T-shirt Merveille Vert bouteille / Marron tabac, vue dos">
+    <svg viewBox="0 0 600 640" aria-hidden="true">
+      <ellipse class="tee__shadow" cx="300" cy="614" rx="210" ry="12" fill="#000"></ellipse>
+      <use href="#teeShape" fill="#304536"></use>
+      <g clip-path="url(#teeClip)">
+        <rect width="600" height="640" fill="url(#teeLight)"></rect>
+        <rect width="600" height="640" filter="url(#fabric)" opacity="0.22"></rect>
+        <ellipse cx="190" cy="470" rx="70" ry="210" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="425" cy="500" rx="60" ry="170" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="300" cy="610" rx="260" ry="30" fill="url(#teeFold)"></ellipse>
+        <path d="M160 70 Q150 160 132 236 M440 70 Q450 160 468 236" stroke="rgba(255,255,255,.07)" stroke-width="1.6" fill="none"></path>
+        <path d="M44 146 Q62 204 88 254 M556 146 Q538 204 512 254 M130 580 Q300 600 470 580" stroke="rgba(255,255,255,.07)" stroke-width="1.3" fill="none" stroke-dasharray="3 3"></path>
+      </g>
+      <path d="M244 42 Q300 68 356 42" fill="none" stroke="#304536" stroke-width="12" stroke-linecap="round"></path>
+       <path d="M244 42 Q300 68 356 42" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="12" stroke-linecap="round" opacity=".6"></path>
+       <path d="M250 50 Q300 74 350 50" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="1.2" stroke-dasharray="3 3"></path>
+      <use href="#teeShape" fill="none" stroke="rgba(0,0,0,.14)" stroke-width="1"></use>
+    </svg>
+    <div class="tee__print"><span class="wm"><svg class="wm__statue" viewBox="0 0 40 104" aria-hidden="true"><use href="#statue" fill="url(#gold)"></use></svg><span class="wm__letters"><span class="wm__l" style="--h:0.42">M</span><span class="wm__l" style="--h:0.56">E</span><span class="wm__l" style="--h:0.7"><i class="wm__cross"></i>R</span><span class="wm__l" style="--h:0.84">V</span><span class="wm__l" style="--h:1">E</span><span class="wm__l" style="--h:0.9">I</span><span class="wm__l" style="--h:0.74">L</span><span class="wm__l" style="--h:0.58">L</span><span class="wm__l" style="--h:0.44">E</span></span></span></div>
+  </div></div></div>
+        <button class="gallery__arrow gallery__arrow--prev" data-step="-1" aria-label="Précédent">‹</button>
+        <button class="gallery__arrow gallery__arrow--next" data-step="1" aria-label="Suivant">›</button>
+      </div>
+    </div>
+
+    <div class="pdp__info">
+      <p class="kicker pdp__kicker">Drop n°1 · Série limitée</p>
+      <h1>T-shirt Merveille</h1>
+      <p class="pdp__price">85,00 €</p>
+      <p class="pdp__tax">TTC — frais de livraison calculés à l'étape suivante.</p>
+
+      <div class="opt">
+        <div class="opt__label"><span>Couleur : <b>Vert bouteille / Marron tabac</b></span></div>
+        <div class="opt__row"><a href="#/produit/bleu" class="swatch swatch--lg  " style="--a:#f1ece1;--b:#1c2b5c" title="Blanc cassé / Bleu marine" aria-label="Blanc cassé / Bleu marine"></a><a href="#/produit/noir" class="swatch swatch--lg  " style="--a:#1f1e1d;--b:#efe7d6" title="Noir délavé / Blanc cassé" aria-label="Noir délavé / Blanc cassé"></a><a href="#/produit/vert" class="swatch swatch--lg is-active " style="--a:#304536;--b:#c09062" title="Vert bouteille / Marron tabac" aria-label="Vert bouteille / Marron tabac"></a></div>
+      </div>
+
+      <div class="opt">
+        <div class="opt__label"><span>Taille : <b data-size-label="">M</b></span><a href="#" data-fake="">Guide des tailles</a></div>
+        <div class="opt__row">
+          <button class="size  " data-size="XS">XS</button><button class="size  " data-size="S">S</button><button class="size  is-active" data-size="M">M</button><button class="size  " data-size="L">L</button><button class="size  " data-size="XL">XL</button><button class="size  " data-size="XXL">XXL</button>
+        </div>
+      </div>
+
+      <p class="stock" data-stock="">Plus que 4 pièces dans cette taille</p>
+
+      <div class="buy">
+        <div class="qty"><button data-q="-1" aria-label="Moins">−</button><span data-qty="">1</span><button data-q="1" aria-label="Plus">+</button></div>
+        <button class="btn" data-add="">Ajouter au panier</button>
+      </div>
+      <p class="edition">Série limitée · 300 pièces numérotées · expédition sous 48 h</p>
+
+      <details class="acc" open="">
+        <summary>Description</summary>
+        <div class="acc__body">
+          <p style="margin-top:0">Le tee-shirt de la maison. Dans le dos, MERVEILLE dessiné comme la ville vue du port : les lettres montent vers la colline et la Bonne Mère, dorée à la feuille, veille au sommet. Sur le cœur, la même signature en petit.</p>
+          <p style="margin-bottom:0">Coloris vert bouteille / marron tabac.</p>
+        </div>
+      </details>
+      <details class="acc">
+        <summary>Composition &amp; entretien</summary>
+        <div class="acc__body"><ul><li>100 % coton peigné, 240 g/m²</li><li>Coupe oversize, épaules tombantes</li><li>Sérigraphie à l'eau + dorure</li><li>Lavage à 30 °C sur l'envers, pas de sèche-linge</li></ul></div>
+      </details>
+      <details class="acc">
+        <summary>Livraison &amp; retours</summary>
+        <div class="acc__body">Livraison offerte en France dès 150 €. Expédition depuis Marseille sous 48 h. Retours gratuits sous 30 jours.</div>
+      </details>
+      <details class="acc">
+        <summary>Broderie personnalisée</summary>
+        <div class="acc__body">Ajoute tes initiales ou ton quartier brodés sous le logo cœur (+15 €). Ex. : « LE PANIER », « ENDOUME », « L'ESTAQUE ».</div>
+      </details>
+    </div>
+  </section>
+
+  <section class="product-grid-section" style="padding-top:0">
+    <div class="section-title"><h2>Les autres teintes</h2><a href="#/collection">Tout voir</a></div>
+    <div class="product-grid"><article class="card reveal">
+    <a href="#/produit/bleu" class="card__media">
+      <span class="card__badge">L'original</span>
+      <div class="tee tee--back tee--light" style="--tee:#f1ece1;--print:#1c2b5c" role="img" aria-label="T-shirt Merveille Blanc cassé / Bleu marine, vue dos">
+    <svg viewBox="0 0 600 640" aria-hidden="true">
+      <ellipse class="tee__shadow" cx="300" cy="614" rx="210" ry="12" fill="#000"></ellipse>
+      <use href="#teeShape" fill="#f1ece1"></use>
+      <g clip-path="url(#teeClip)">
+        <rect width="600" height="640" fill="url(#teeLight)"></rect>
+        <rect width="600" height="640" filter="url(#fabric)" opacity="0.1"></rect>
+        <ellipse cx="190" cy="470" rx="70" ry="210" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="425" cy="500" rx="60" ry="170" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="300" cy="610" rx="260" ry="30" fill="url(#teeFold)"></ellipse>
+        <path d="M160 70 Q150 160 132 236 M440 70 Q450 160 468 236" stroke="rgba(40,30,10,.16)" stroke-width="1.6" fill="none"></path>
+        <path d="M44 146 Q62 204 88 254 M556 146 Q538 204 512 254 M130 580 Q300 600 470 580" stroke="rgba(40,30,10,.16)" stroke-width="1.3" fill="none" stroke-dasharray="3 3"></path>
+      </g>
+      <path d="M244 42 Q300 68 356 42" fill="none" stroke="#f1ece1" stroke-width="12" stroke-linecap="round"></path>
+       <path d="M244 42 Q300 68 356 42" fill="none" stroke="rgba(40,30,10,.16)" stroke-width="12" stroke-linecap="round" opacity=".6"></path>
+       <path d="M250 50 Q300 74 350 50" fill="none" stroke="rgba(40,30,10,.16)" stroke-width="1.2" stroke-dasharray="3 3"></path>
+      <use href="#teeShape" fill="none" stroke="rgba(0,0,0,.14)" stroke-width="1"></use>
+    </svg>
+    <div class="tee__print"><span class="wm"><svg class="wm__statue" viewBox="0 0 40 104" aria-hidden="true"><use href="#statue" fill="url(#gold)"></use></svg><span class="wm__letters"><span class="wm__l" style="--h:0.42">M</span><span class="wm__l" style="--h:0.56">E</span><span class="wm__l" style="--h:0.7"><i class="wm__cross"></i>R</span><span class="wm__l" style="--h:0.84">V</span><span class="wm__l" style="--h:1">E</span><span class="wm__l" style="--h:0.9">I</span><span class="wm__l" style="--h:0.74">L</span><span class="wm__l" style="--h:0.58">L</span><span class="wm__l" style="--h:0.44">E</span></span></span></div>
+  </div>
+      <div class="tee tee--front tee--light" style="--tee:#f1ece1;--print:#1c2b5c" role="img" aria-label="T-shirt Merveille Blanc cassé / Bleu marine, vue face">
+    <svg viewBox="0 0 600 640" aria-hidden="true">
+      <ellipse class="tee__shadow" cx="300" cy="614" rx="210" ry="12" fill="#000"></ellipse>
+      <use href="#teeShape" fill="#f1ece1"></use>
+      <g clip-path="url(#teeClip)">
+        <rect width="600" height="640" fill="url(#teeLight)"></rect>
+        <rect width="600" height="640" filter="url(#fabric)" opacity="0.1"></rect>
+        <ellipse cx="190" cy="470" rx="70" ry="210" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="425" cy="500" rx="60" ry="170" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="300" cy="610" rx="260" ry="30" fill="url(#teeFold)"></ellipse>
+        <path d="M160 70 Q150 160 132 236 M440 70 Q450 160 468 236" stroke="rgba(40,30,10,.16)" stroke-width="1.6" fill="none"></path>
+        <path d="M44 146 Q62 204 88 254 M556 146 Q538 204 512 254 M130 580 Q300 600 470 580" stroke="rgba(40,30,10,.16)" stroke-width="1.3" fill="none" stroke-dasharray="3 3"></path>
+      </g>
+      <path d="M248 44 Q300 102 352 44 Q300 68 248 44Z" fill="rgba(0,0,0,.34)"></path>
+       <path d="M244 42 Q300 104 356 42" fill="none" stroke="#f1ece1" stroke-width="14" stroke-linecap="round"></path>
+       <path d="M244 42 Q300 104 356 42" fill="none" stroke="rgba(40,30,10,.16)" stroke-width="14" stroke-linecap="round" opacity=".7"></path>
+       <path d="M252 50 Q300 108 348 50" fill="none" stroke="rgba(40,30,10,.16)" stroke-width="1.2" stroke-dasharray="3 3"></path>
+      <use href="#teeShape" fill="none" stroke="rgba(0,0,0,.14)" stroke-width="1"></use>
+    </svg>
+    <div class="tee__chest"><span class="wm"><svg class="wm__statue" viewBox="0 0 40 104" aria-hidden="true"><use href="#statue" fill="url(#gold)"></use></svg><span class="wm__letters"><span class="wm__l" style="--h:0.42">M</span><span class="wm__l" style="--h:0.56">E</span><span class="wm__l" style="--h:0.7"><i class="wm__cross"></i>R</span><span class="wm__l" style="--h:0.84">V</span><span class="wm__l" style="--h:1">E</span><span class="wm__l" style="--h:0.9">I</span><span class="wm__l" style="--h:0.74">L</span><span class="wm__l" style="--h:0.58">L</span><span class="wm__l" style="--h:0.44">E</span></span></span></div>
+  </div>
+      <span class="card__quick"><button class="btn btn--full" data-quick="bleu">Ajout rapide — M</button></span>
+    </a>
+    <div class="card__info">
+      <h3 class="card__title"><a href="#/produit/bleu">T-shirt Merveille | Blanc &amp; Bleu</a></h3>
+      <p class="card__price">85,00 €</p>
+    </div>
+    <div class="card__swatches"><a href="#/produit/bleu" class="swatch is-active " style="--a:#f1ece1;--b:#1c2b5c" title="Blanc cassé / Bleu marine" aria-label="Blanc cassé / Bleu marine"></a><a href="#/produit/noir" class="swatch  " style="--a:#1f1e1d;--b:#efe7d6" title="Noir délavé / Blanc cassé" aria-label="Noir délavé / Blanc cassé"></a><a href="#/produit/vert" class="swatch  " style="--a:#304536;--b:#c09062" title="Vert bouteille / Marron tabac" aria-label="Vert bouteille / Marron tabac"></a></div>
+  </article><article class="card reveal">
+    <a href="#/produit/noir" class="card__media">
+      <span class="card__badge">Nouveau</span>
+      <div class="tee tee--back tee--dark" style="--tee:#1f1e1d;--print:#efe7d6" role="img" aria-label="T-shirt Merveille Noir délavé / Blanc cassé, vue dos">
+    <svg viewBox="0 0 600 640" aria-hidden="true">
+      <ellipse class="tee__shadow" cx="300" cy="614" rx="210" ry="12" fill="#000"></ellipse>
+      <use href="#teeShape" fill="#1f1e1d"></use>
+      <g clip-path="url(#teeClip)">
+        <rect width="600" height="640" fill="url(#teeLight)"></rect>
+        <rect width="600" height="640" filter="url(#fabric)" opacity="0.22"></rect>
+        <ellipse cx="190" cy="470" rx="70" ry="210" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="425" cy="500" rx="60" ry="170" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="300" cy="610" rx="260" ry="30" fill="url(#teeFold)"></ellipse>
+        <path d="M160 70 Q150 160 132 236 M440 70 Q450 160 468 236" stroke="rgba(255,255,255,.08)" stroke-width="1.6" fill="none"></path>
+        <path d="M44 146 Q62 204 88 254 M556 146 Q538 204 512 254 M130 580 Q300 600 470 580" stroke="rgba(255,255,255,.08)" stroke-width="1.3" fill="none" stroke-dasharray="3 3"></path>
+      </g>
+      <path d="M244 42 Q300 68 356 42" fill="none" stroke="#1f1e1d" stroke-width="12" stroke-linecap="round"></path>
+       <path d="M244 42 Q300 68 356 42" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="12" stroke-linecap="round" opacity=".6"></path>
+       <path d="M250 50 Q300 74 350 50" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="1.2" stroke-dasharray="3 3"></path>
+      <use href="#teeShape" fill="none" stroke="rgba(0,0,0,.14)" stroke-width="1"></use>
+    </svg>
+    <div class="tee__print"><span class="wm"><svg class="wm__statue" viewBox="0 0 40 104" aria-hidden="true"><use href="#statue" fill="url(#gold)"></use></svg><span class="wm__letters"><span class="wm__l" style="--h:0.42">M</span><span class="wm__l" style="--h:0.56">E</span><span class="wm__l" style="--h:0.7"><i class="wm__cross"></i>R</span><span class="wm__l" style="--h:0.84">V</span><span class="wm__l" style="--h:1">E</span><span class="wm__l" style="--h:0.9">I</span><span class="wm__l" style="--h:0.74">L</span><span class="wm__l" style="--h:0.58">L</span><span class="wm__l" style="--h:0.44">E</span></span></span></div>
+  </div>
+      <div class="tee tee--front tee--dark" style="--tee:#1f1e1d;--print:#efe7d6" role="img" aria-label="T-shirt Merveille Noir délavé / Blanc cassé, vue face">
+    <svg viewBox="0 0 600 640" aria-hidden="true">
+      <ellipse class="tee__shadow" cx="300" cy="614" rx="210" ry="12" fill="#000"></ellipse>
+      <use href="#teeShape" fill="#1f1e1d"></use>
+      <g clip-path="url(#teeClip)">
+        <rect width="600" height="640" fill="url(#teeLight)"></rect>
+        <rect width="600" height="640" filter="url(#fabric)" opacity="0.22"></rect>
+        <ellipse cx="190" cy="470" rx="70" ry="210" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="425" cy="500" rx="60" ry="170" fill="url(#teeFold)"></ellipse>
+        <ellipse cx="300" cy="610" rx="260" ry="30" fill="url(#teeFold)"></ellipse>
+        <path d="M160 70 Q150 160 132 236 M440 70 Q450 160 468 236" stroke="rgba(255,255,255,.08)" stroke-width="1.6" fill="none"></path>
+        <path d="M44 146 Q62 204 88 254 M556 146 Q538 204 512 254 M130 580 Q300 600 470 580" stroke="rgba(255,255,255,.08)" stroke-width="1.3" fill="none" stroke-dasharray="3 3"></path>
+      </g>
+      <path d="M248 44 Q300 102 352 44 Q300 68 248 44Z" fill="rgba(0,0,0,.34)"></path>
+       <path d="M244 42 Q300 104 356 42" fill="none" stroke="#1f1e1d" stroke-width="14" stroke-linecap="round"></path>
+       <path d="M244 42 Q300 104 356 42" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="14" stroke-linecap="round" opacity=".7"></path>
+       <path d="M252 50 Q300 108 348 50" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="1.2" stroke-dasharray="3 3"></path>
+      <use href="#teeShape" fill="none" stroke="rgba(0,0,0,.14)" stroke-width="1"></use>
+    </svg>
+    <div class="tee__chest"><span class="wm"><svg class="wm__statue" viewBox="0 0 40 104" aria-hidden="true"><use href="#statue" fill="url(#gold)"></use></svg><span class="wm__letters"><span class="wm__l" style="--h:0.42">M</span><span class="wm__l" style="--h:0.56">E</span><span class="wm__l" style="--h:0.7"><i class="wm__cross"></i>R</span><span class="wm__l" style="--h:0.84">V</span><span class="wm__l" style="--h:1">E</span><span class="wm__l" style="--h:0.9">I</span><span class="wm__l" style="--h:0.74">L</span><span class="wm__l" style="--h:0.58">L</span><span class="wm__l" style="--h:0.44">E</span></span></span></div>
+  </div>
+      <span class="card__quick"><button class="btn btn--full" data-quick="noir">Ajout rapide — M</button></span>
+    </a>
+    <div class="card__info">
+      <h3 class="card__title"><a href="#/produit/noir">T-shirt Merveille | Noir &amp; Blanc</a></h3>
+      <p class="card__price">85,00 €</p>
+    </div>
+    <div class="card__swatches"><a href="#/produit/bleu" class="swatch  " style="--a:#f1ece1;--b:#1c2b5c" title="Blanc cassé / Bleu marine" aria-label="Blanc cassé / Bleu marine"></a><a href="#/produit/noir" class="swatch is-active " style="--a:#1f1e1d;--b:#efe7d6" title="Noir délavé / Blanc cassé" aria-label="Noir délavé / Blanc cassé"></a><a href="#/produit/vert" class="swatch  " style="--a:#304536;--b:#c09062" title="Vert bouteille / Marron tabac" aria-label="Vert bouteille / Marron tabac"></a></div>
+  </article></div>
+  </section></main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="wm wm--footer" data-wordmark=""><svg class="wm__statue" viewBox="0 0 40 104" aria-hidden="true"><use href="#statue" fill="url(#gold)"></use></svg><span class="wm__letters"><span class="wm__l" style="--h:0.42">M</span><span class="wm__l" style="--h:0.56">E</span><span class="wm__l" style="--h:0.7"><i class="wm__cross"></i>R</span><span class="wm__l" style="--h:0.84">V</span><span class="wm__l" style="--h:1">E</span><span class="wm__l" style="--h:0.9">I</span><span class="wm__l" style="--h:0.74">L</span><span class="wm__l" style="--h:0.58">L</span><span class="wm__l" style="--h:0.44">E</span></span></span>
+        <p>Chaque pièce porte l'esprit du vieux Marseille : le linge qui sèche entre deux façades, l'apéro qui s'étire sur le port, la Bonne Mère qui veille sur tout le monde. Pas seulement une marque — une manière de vivre la ville.</p>
+        <div class="footer__social social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" class="fill"></circle></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3-3.46M14 3c.4 2.6 2.2 4.4 5 4.6"></path></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>La Maison</h4>
+        <a href="#/maison">Notre histoire</a><a href="#">Contact</a><a href="#">Boutique du Panier</a><a href="#">Presse</a>
+      </div>
+      <div class="footer__col">
+        <h4>Service client</h4>
+        <a href="#">Livraison &amp; retours</a><a href="#">Guide des tailles</a><a href="#">Entretien</a><a href="#">FAQ</a>
+      </div>
+      <div class="footer__col footer__news">
+        <h4>Newsletter</h4>
+        <p>Les drops en avant-première, jamais de spam.</p>
+        <form class="footer__form" data-fake-form="">
+          <input type="email" placeholder="Ton adresse e-mail" aria-label="E-mail">
+          <button class="btn btn--full" type="submit">S'inscrire</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Merveille — Maison du Vieux-Port · FR · €</span>
+      <span class="footer__pay">VISA · MASTERCARD · AMEX · APPLE PAY</span>
+    </div>
+  </footer>
+
+  <!-- Panier -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__head">
+      <h3>Panier</h3>
+      <button class="icon-close" id="drawerClose" aria-label="Fermer">×</button>
+    </div>
+    <div class="drawer__ship" id="drawerShip">Plus que <b>150,00 €</b> pour la livraison offerte
+    <div class="drawer__bar"><i style="width:0%"></i></div></div>
+    <div class="drawer__items" id="drawerItems"><div class="drawer__empty"><p>Ton panier est vide.</p><a href="#/collection" class="btn" data-close-drawer="">Découvrir le drop</a></div></div>
+    <div class="drawer__foot" id="drawerFoot"></div>
+  </aside>
+
+  <!-- Popup newsletter (équivalent "Join The Family") -->
+  <div class="popup is-on" id="popup" aria-hidden="true">
+    <div class="popup__card">
+      <div class="popup__img photo" data-file="soiree.jpg" data-ph="Soirée sur le port"><img src="images/soiree.jpg" alt=""></div>
+      <div class="popup__body">
+        <button class="icon-close" id="popupClose" aria-label="Fermer">×</button>
+        <h3>Rejoins la famille</h3>
+        <p>Accès en avant-première aux nouveaux drops et aux séries limitées, avant tout le monde.</p>
+        <form data-fake-form="">
+          <input type="email" placeholder="Ton adresse e-mail" aria-label="E-mail">
+          <button class="btn btn--full" type="submit">Accès en avant-première</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/app.js?v=5"></script>
+
+
+</body></html>
